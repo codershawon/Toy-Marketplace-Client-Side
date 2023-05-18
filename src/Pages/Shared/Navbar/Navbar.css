@@ -1,0 +1,13 @@
+.navItem {
+    position: relative;
+  }
+  
+  .navItem:hover::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -5px; 
+    width: 100%;
+    height: 3px; 
+    background-color: #ffcc00; 
+  }
