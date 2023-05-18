@@ -52,7 +52,7 @@ const Navbar = () => {
           {user ? (
           <>
            <div title={user.displayName}>
-            <img className="w-10 h-10 rounded-full bg-white" src={user.photoURl} alt="" />
+            <img className="w-10 h-10 rounded-full bg-inherit" src={user.photoURl} alt="" />
            </div>
            <Link to="/signup">
               <button onClick={handleLogout} className="btn btn-active btn-ghost">Logout</button>

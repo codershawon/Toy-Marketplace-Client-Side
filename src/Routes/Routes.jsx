@@ -4,6 +4,8 @@ import Home from "../Pages/Home/Home/Home";
 import ErrorPage from "../ErrorPage/ErrorPage";
 import SignUp from "../Pages/SignUp/SignUp";
 import SignIn from "../Pages/SignIn/SignIn";
+// import PrivateRoutes from "./PrivateRoutes";
+import Blogs from "../Pages/Blogs/Blogs";
 import PrivateRoutes from "./PrivateRoutes";
 
 const router = createBrowserRouter([
@@ -14,7 +16,7 @@ const router = createBrowserRouter([
       children: [
         {
           path: "/",
-          element: <Home></Home>,
+          element: <PrivateRoutes><Home></Home></PrivateRoutes>,
         },
         {
             path:"/signup",
@@ -23,6 +25,10 @@ const router = createBrowserRouter([
         {
             path:"/login",
             element:<SignIn></SignIn>
+        },
+        {
+            path:"/blogs",
+            element:<PrivateRoutes><Blogs></Blogs></PrivateRoutes>
         }
       ],
     },
