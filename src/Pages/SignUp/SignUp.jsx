@@ -1,10 +1,58 @@
-import React from "react";
-import "./SignUp.css"
-import { Link } from "react-router-dom";
+import React, { useContext, useState } from "react";
+import "./SignUp.css";
+import { Link, Navigate } from "react-router-dom";
+import { ToastContainer, toast } from "react-toastify";
+import 'react-toastify/dist/ReactToastify.css';
+import { AuthContext } from "../../Providers/AuthProviders";
 const SignUp = () => {
+  const [error, setError] = useState("");
+  const [success, setSuccess] = useState("");
+  const { createUser} = useContext(AuthContext);
+  const handleSignUp = (e) => {
+    e.preventDefault();
+    const form = e.target;
+    const firstName = form.firstName.value;
+    const lastName = form.lastName.value;
+    const email = form.email.value;
+    const password = form.password.value;
+    const confirmPassword = form.confirmPassword.value;
+    const user = {
+      firstName,
+      lastName,
+      email,
+      password,
+      confirmPassword,
+    };
+    console.log(user);
+    if (password !== confirmPassword) {
+      setError(
+        toast.error(
+          "Your password didn't match. Please provide password exactly"
+        )
+      );
+      return;
+    } else if (password.length < 6) {
+      setError(
+        toast.error(
+          "Your password length is less than 6 character. Please provide password more than 6 character"
+        )
+      );
+      return;
+    }
+    createUser(email,password).then(result=>{
+        const loggedUser=result.user
+        console.log(loggedUser)
+        form.reset()
+        setSuccess(
+            toast.success("Your registration in SuperHero Toy Kingdom is Successful")
+        )
+    }).catch(()=>{
+        setError(toast.error("Your registration in SuperHero Toy Kingdom is Unsuccessful"))
+    })
+  };
   return (
     <div className="border border-gray-400 rounded-lg w-[650px] h-[800px] mx-auto mb-9">
-      <form>
+      <form onSubmit={handleSignUp}>
         <h1 className="text-center text-3xl font-bold mt-6">Sign Up</h1>
         <p className="text-center mt-2">
           Create your account. It's free and only takes a minute
@@ -26,7 +74,7 @@ const SignUp = () => {
             <input
               className="bg-gray-300 rounded-lg w-60 h-10 pl-3"
               type="text"
-              name="firstName"
+              name="lastName"
               id=""
               placeholder="Your Last Name"
               required
@@ -76,8 +124,14 @@ const SignUp = () => {
           />
           <span>Continue With Google</span>
         </button>
-        <p className="text-center mt-3">Already have an account? <Link to="/login"><span className="text-[#ff3811] font-bold">Sign In</span></Link></p>
+        <p className="text-center mt-3">
+          Already have an account?{" "}
+          <Link to="/login">
+            <span className="text-[#ff3811] font-bold">Sign In</span>
+          </Link>
+        </p>
       </form>
+      <ToastContainer />
     </div>
   );
 };

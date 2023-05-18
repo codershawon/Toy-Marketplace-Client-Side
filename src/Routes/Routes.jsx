@@ -4,6 +4,7 @@ import Home from "../Pages/Home/Home/Home";
 import ErrorPage from "../ErrorPage/ErrorPage";
 import SignUp from "../Pages/SignUp/SignUp";
 import SignIn from "../Pages/SignIn/SignIn";
+import PrivateRoutes from "./PrivateRoutes";
 
 const router = createBrowserRouter([
     {
