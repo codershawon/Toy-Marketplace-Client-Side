@@ -3,7 +3,7 @@ import "./SignUp.css"
 import { Link } from "react-router-dom";
 const SignUp = () => {
   return (
-    <div className="border border-gray-400 rounded-lg w-[650px] h-[750px] mx-auto mb-9">
+    <div className="border border-gray-400 rounded-lg w-[650px] h-[800px] mx-auto mb-9">
       <form>
         <h1 className="text-center text-3xl font-bold mt-6">Sign Up</h1>
         <p className="text-center mt-2">
@@ -67,7 +67,7 @@ const SignUp = () => {
           />
         </div>
         <button className="btn text-white w-[500px] ml-16 mt-8">Sign Up</button>
-        <p className="text-center mt-3">Or Sign In With</p>
+        <p className="text-center mt-3">Or Sign Up With</p>
         <button className="googleBtn flex justify-center items-center ml-16  w-[500px] p-2 mt-8">
           <img
             className="w-[32px] h-[32px] mr-2"
