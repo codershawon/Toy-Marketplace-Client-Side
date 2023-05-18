@@ -9,7 +9,7 @@ function App() {
   return (
     <>
       <div>
-       <h1 className='text-7xl'>This is Toy market place</h1>
+      
       </div>
     </>
   )
