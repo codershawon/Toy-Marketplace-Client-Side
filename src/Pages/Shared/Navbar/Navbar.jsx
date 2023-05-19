@@ -1,4 +1,4 @@
-import React, { useContext } from "react";
+import React, { useContext} from "react";
 import { Link } from "react-router-dom";
 import "./Navbar.css";
 import { AuthContext } from "../../../Providers/AuthProviders";
@@ -33,31 +33,44 @@ const Navbar = () => {
             {" "}
             <li className="navItem">All Toys</li>
           </Link>
-         {
-            user? <Link to="/myToys">
-            {" "}
-            <li className="navItem">My Toys</li>
-          </Link>:""
-         }
-          {
-            user?<Link to="/addAToy">
-            {" "}
-            <li className="navItem">Add A Toy</li>
-          </Link>:""
-          }
+          {user ? (
+            <Link to="/myToys">
+              {" "}
+              <li className="navItem">My Toys</li>
+            </Link>
+          ) : (
+            ""
+          )}
+          {user ? (
+            <Link to={`/toySuperHero`}>
+              {" "}
+              <li className="navItem">Add A Toy</li>
+            </Link>
+          ) : (
+            ""
+          )}
           <Link to="/blogs">
             {" "}
             <li className="navItem">Blogs</li>
           </Link>
           {user ? (
-          <>
-           <div title={user.displayName}>
-            <img className="w-10 h-10 rounded-full bg-inherit" src={user.photoURl} alt="" />
-           </div>
-           <Link to="/signup">
-              <button onClick={handleLogout} className="btn btn-active btn-ghost">Logout</button>
-            </Link>
-          </>
+            <>
+              <div title={user.displayName}>
+                <img
+                  className="w-10 h-10 rounded-full bg-inherit"
+                  src={user.photoURl}
+                  alt=""
+                />
+              </div>
+              <Link to="/signup">
+                <button
+                  onClick={handleLogout}
+                  className="btn btn-active btn-ghost"
+                >
+                  Logout
+                </button>
+              </Link>
+            </>
           ) : (
             <Link to="/login">
               <button className="btn btn-active btn-ghost">Login</button>
