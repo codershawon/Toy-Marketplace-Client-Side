@@ -1,0 +1,130 @@
+[
+  {
+    "name": "Iron Man",
+    "image": "https://i.ibb.co/YkJV4Pf/photo-1636840438199-9125cd03c3b0.jpg",
+    "price": " $19.99",
+    "rating": "4.5",
+    "category": "Action Figure",
+    "subCategory": "Marvel"
+  },
+  {
+    "name": "Spider-Man",
+    "image": "https://i.ibb.co/52TVGyR/photo-1557985594-29f3ad9f5134.jpg",
+    "price": "$14.99",
+    "rating": "4.2",
+    "category": "Action Figure",
+    "subCategory": "Marvel"
+  },
+  {
+    "name": "Hulk",
+    "image": "https://i.ibb.co/31kdszZ/photo-1542623024-a797a755b8d0.jpg",
+    "price": "$16.99",
+    "rating": "4.3",
+    "category": "Action Figure",
+    "subCategory": "Marvel"
+  },
+  {
+    "name": "Groot",
+    "image": "https://i.ibb.co/DWQGgRD/photo-1559535332-db9971090158.jpg",
+    "price": "$12.99",
+    "rating": "4.1",
+    "category": "Action Figure",
+    "subCategory": "Marvel"
+  },
+  {
+    "name": "Batman",
+    "image": "https://i.ibb.co/LNGCrXf/photo-1531259683007-016a7b628fc3.jpg",
+    "price": "$17.99",
+    "rating": "4.4",
+    "category": "Action Figure",
+    "subCategory": "DC"
+  },
+  {
+    "name": "Superman",
+    "image": "https://i.ibb.co/5srksYH/photo-1558679908-541bcf1249ff.jpg",
+    "price": "$16.99",
+    "rating": "4.3",
+    "category": "Action Figure",
+    "subCategory": "DC"
+  },
+  {
+    "name": "Deadpool",
+    "image": "https://i.ibb.co/zsC8GKf/photo-1608889335941-32ac5f2041b9.jpg",
+    "price": " $13.99",
+    "rating": "4.0",
+    "category": "Action Figure",
+    "subCategory": "DC"
+  },
+  {
+    "name": "Aquaman",
+    "image": "https://i.ibb.co/GRcY2z3/6000201972534.jpg",
+    "price": "$15.99",
+    "rating": "4.2",
+    "category": "Action Figure",
+    "subCategory": "DC"
+  },
+  {
+    "name": "Darth Vader",
+    "image": "https://i.ibb.co/Vmw5wXj/photo-1595139280770-95b6de5f0635.jpg",
+    "price": "$21.99",
+    "rating": "4.6",
+    "category": "Action Figure",
+    "subCategory": "Star wars"
+  },
+  {
+    "name": "Yoda",
+    "image": "https://i.ibb.co/5TXt20f/photo-1577448369720-afe09e516d25.jpg",
+    "price": "$18.99",
+    "rating": " 4.2",
+    "category": "Action Figure",
+    "subCategory": "Star wars"
+  },
+  {
+    "name": "Han Solo",
+    "image": "https://i.ibb.co/QNr4jyb/photo-1592435468595-ab8dd76cd754.jpg",
+    "price": "$21.99",
+    "rating": "4.4",
+    "category": "Action Figure",
+    "subCategory": "Star wars"
+  },
+  {
+    "name": "Luke Skywalker",
+    "image": "https://i.ibb.co/XXpHqvz/photo-1608346128025-1896b97a6fa7.jpg",
+    "price": "$19.99",
+    "rating": "4.5",
+    "category": "Action Figure",
+    "subCategory": "Star wars"
+  },
+  {
+    "name": "Optimus Prime",
+    "image": "https://i.ibb.co/MsnZbjc/0-sua5-XRCq-MWr-Znd-KN.jpg",
+    "price": "$23.99",
+    "rating": "4.7",
+    "category": "Action Figure",
+    "subCategory": "Transformers"
+  },
+  {
+    "name": "Bumblebee",
+    "image": "https://i.ibb.co/D4XzgMs/photo-1545548138-6a1e65b5e233.jpg",
+    "price": "$20.99",
+    "rating": "4.4",
+    "category": "Action Figure",
+    "subCategory": "Transformers"
+  },
+  {
+    "name": "Megatron",
+    "image": "https://i.ibb.co/71q0gmB/photo-1545548226-5fce973bef90.jpg",
+    "price": "$22.99",
+    "rating": "4.5",
+    "category": "Action Figure",
+    "subCategory": "Transformers"
+  },
+  {
+    "name": "Starscream",
+    "image": "https://i.ibb.co/CmBcqg4/photo-1658233427331-088df3be7ad5.jpg",
+    "price": "$21.99",
+    "rating": "4.3",
+    "category": "Action Figure",
+    "subCategory": "Transformers"
+  }
+]
