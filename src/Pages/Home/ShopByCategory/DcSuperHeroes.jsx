@@ -2,8 +2,9 @@ import React from 'react';
 import { Rating } from "@smastrom/react-rating";
 
 import "@smastrom/react-rating/style.css";
+import { Link } from 'react-router-dom';
 const DcSuperHeroes = ({dcSuperHero}) => {
-    const { image, name, rating, id, price } = dcSuperHero;
+    const { image, name, rating, _id, price } = dcSuperHero;
     return (
        
     <div className="card card-side bg-gray-300 w-[650px] shadow-xl">
@@ -25,7 +26,7 @@ const DcSuperHeroes = ({dcSuperHero}) => {
           </p>
         </div>
         <div className="card-actions justify-end">
-          <button className="btn btn-primary mt-3">View Details</button>
+         <Link to={`/toyDetails/${_id}`}> <button className="btn btn-primary mt-3">View Details</button></Link>
         </div>
       </div>
     </div>

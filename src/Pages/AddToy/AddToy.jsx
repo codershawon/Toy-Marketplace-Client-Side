@@ -16,8 +16,9 @@ const AddToy = () => {
     const price=form.price.value;
     const ratings=form.ratings.value;
     const quantity=form.quantity.value;
+    const details=form.details.value;
     const userDetails={
-      imageURL,toyName,sellerName,email,subCategory,price,ratings,quantity
+      imageURL,toyName,sellerName,email,subCategory,price,ratings,quantity,details
     }
     console.log(userDetails)
     fetch(`http://localhost:5000/newToySuperHero`,{
@@ -54,7 +55,7 @@ const AddToy = () => {
 
   return (
     <div className="bg-[#f3f3f3] rounded-lg h-[800px] w-[800px] mx-auto mb-6">
-      <h1 className="text-center text-3xl font-bold pt-6">Add A Toy</h1>
+      <h1 className="text-center text-3xl font-bold pt-6 uppercase">Add A Toy</h1>
       <form onSubmit={handleAddToy}>
         <div className="flex justify-center pt-16 gap-5">
           <div>

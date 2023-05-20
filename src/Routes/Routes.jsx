@@ -8,40 +8,66 @@ import SignIn from "../Pages/SignIn/SignIn";
 import Blogs from "../Pages/Blogs/Blogs";
 import PrivateRoutes from "./PrivateRoutes";
 import AddToy from "../Pages/AddToy/AddToy";
-import AllToys from "../Pages/AllToys/AllToys";
+import ToyDetails from "../Pages/ToyDetails/ToyDetails";
+import MyToys from "../Pages/MyToys/MyToys";
+import UpdatedToys from "../Pages/UpdatedToys/UpdatedToys";
 
 const router = createBrowserRouter([
-    {
-      path: "/",
-      element: <Main></Main>,
-      errorElement: <ErrorPage />,
-      children: [
-        {
-          path: "/",
-          element: <PrivateRoutes><Home></Home></PrivateRoutes>,
-        },
-        {
-            path:"/signup",
-            element:<SignUp></SignUp>
-        },
-        {
-            path:"/login",
-            element:<SignIn></SignIn>
-        },
-        {
-            path:"/blogs",
-            element:<PrivateRoutes><Blogs></Blogs></PrivateRoutes>
-        },
-        {
-          path:"/toySuperHero",
-          element:<AddToy></AddToy>,
-        },
-        {
-          path:"/allToys",
-          element:<AllToys></AllToys>
-        }
-      ],
-    },
-  ]);
+  {
+    path: "/",
+    element: <Main></Main>,
+    errorElement: <ErrorPage />,
+    children: [
+      {
+        path: "/",
+        element: (
+          <PrivateRoutes>
+            <Home></Home>
+          </PrivateRoutes>
+        ),
+      },
+      {
+        path: "/signup",
+        element: <SignUp></SignUp>,
+      },
+      {
+        path: "/login",
+        element: <SignIn></SignIn>,
+      },
+      {
+        path: "/blogs",
+        element: (
+          <PrivateRoutes>
+            <Blogs></Blogs>
+          </PrivateRoutes>
+        ),
+      },
+      {
+        path: "/toySuperHero",
+        element: <AddToy></AddToy>,
+      },
+      {
+        path: "/myToys",
+        element: (
+          <PrivateRoutes>
+            <MyToys></MyToys>
+          </PrivateRoutes>
+        ),
+        loader:()=>fetch(`http://localhost:5000/toySuperHero`)
+      },
+      {
+        path: "/toyDetails/:id",
+        element: <ToyDetails />,
+        loader: ({ params }) => fetch(`http://localhost:5000/newToySuperHero/${params.id}`)
+      },
+     {
+      path:"/updatedToys/:id",
+      element:<UpdatedToys></UpdatedToys>,
+      loader:({params})=>fetch(`http://localhost:5000/newToySuperHero/${params.id}`)
+     }
+      
+    ],
+  },
+]);
 
-  export default router;
+export default router;

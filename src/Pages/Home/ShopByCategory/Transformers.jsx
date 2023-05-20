@@ -2,8 +2,9 @@ import React from 'react';
 import { Rating } from "@smastrom/react-rating";
 
 import "@smastrom/react-rating/style.css";
+import { Link } from 'react-router-dom';
 const Transformers = ({transformer}) => {
-    const { image, name, rating, id, price } = transformer;
+    const { image, name, rating, _id, price } = transformer;
     return (
         <div className="card card-side bg-gray-300 w-[650px] shadow-xl">
         <figure>
@@ -24,7 +25,7 @@ const Transformers = ({transformer}) => {
             </p>
           </div>
           <div className="card-actions justify-end">
-            <button className="btn btn-primary mt-3">View Details</button>
+           <Link to={`/toyDetails/${_id}`}> <button className="btn btn-primary mt-3">View Details</button></Link>
           </div>
         </div>
       </div>
