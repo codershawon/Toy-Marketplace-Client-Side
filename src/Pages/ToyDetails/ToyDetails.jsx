@@ -1,28 +1,29 @@
 import React, { useContext } from "react";
-import { useLoaderData } from "react-router-dom";
+
 import { AuthContext } from "../../Providers/AuthProviders";
 import { Rating } from "@smastrom/react-rating";
 
 import "@smastrom/react-rating/style.css";
+import { useLoaderData } from "react-router-dom";
 const ToyDetails = () => {
   const toyDetails = useLoaderData();
   const { user } = useContext(AuthContext);
-  console.log(toyDetails.length);
   const {
-    imageURL,
-    toyName,
-    sellerName,
-    email,
+    image,
+    // toyName,
+    // sellerName,
+    name,
+    // email,
     price,
-    ratings,
-    quantity,
-    details,
+    rating,
+    // quantity,
+    // details,
   } = toyDetails;
   return (
     <div>
       <div className="card w-[450px] mx-auto bg-[#F3f3f3] shadow-xl mb-4">
         <figure className="px-10 pt-10">
-          <img src={imageURL} className="rounded-xl" />
+          <img src={image} className="rounded-xl" />
         </figure>
         <div className="card-body items-left text-left leading-10 ml-3">
           <h2 className="card-title">
@@ -30,9 +31,9 @@ const ToyDetails = () => {
               {" "}
               <span className="ml-2 font-bold uppercase">Toy Name:</span>{" "}
             </span>
-            <span className="text-[#757575] font-semibold">{toyName}</span>
+            <span className="text-[#757575] font-semibold">{name}</span>
           </h2>
-          <h2>
+          {/* <h2>
             <span className=" border-s-4 border-gray-500 rounded mb-3">
               {" "}
               <span className="ml-2 font-bold uppercase">
@@ -41,14 +42,14 @@ const ToyDetails = () => {
             </span>
 
             <span className="text-[#757575] font-semibold">{sellerName}</span>
-          </h2>
-          <h2>
+          </h2> */}
+          {/* <h2>
             <span className=" border-s-4 border-gray-500 rounded mb-3">
               <span className="ml-2 font-bold uppercase">Seller Email:</span>{" "}
             </span>
 
             <span className="text-[#757575] font-semibold">{email}</span>
-          </h2>
+          </h2> */}
           <h2>
             <span className=" border-s-4 border-gray-500 rounded mb-3">
               <span className="ml-2 font-bold uppercase">Price:</span>{" "}
@@ -66,28 +67,29 @@ const ToyDetails = () => {
                 <Rating
                   className="mx-auto"
                   style={{ maxWidth: 120 }}
-                  value={ratings}
+                  value={rating}
                   readOnly
                 />
               </p>
             </span>
           </h2>
-          <h2>
+          {/* <h2>
             <span className=" border-s-4 border-gray-500 rounded mb-3">
               <span className="ml-2 font-bold uppercase">Available Quantity:</span>{" "}
             </span>
 
             <span className="text-[#757575] font-semibold">{quantity}</span>
-          </h2>
-          <h2>
+          </h2> */}
+          {/* <h2>
             <span className=" border-s-4 border-gray-500 rounded mb-3">
               <span className="ml-2 font-bold uppercase">Description:</span>{" "}
             </span>
 
             <span className="text-[#757575] font-semibold">{details}</span>
           </h2>
-        </div>
+        </div> */}
       </div>
+    </div>
     </div>
   );
 };
