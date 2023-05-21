@@ -5,13 +5,19 @@ import Toys from "./Toys";
 const MyToys = () => {
   const { user } = useContext(AuthContext);
   const [myToys, setMyToys] = useState([]);
-  const url = `http://localhost:5000/newToySuperHero?email=${user?.email}`;
+  const [sortOrder, setSortOrder] = useState(1);
+  const url = `http://localhost:5000/newToySuperHero?email=${user?.email}&sortField=price&sortOrder=${sortOrder}`;
+
   useEffect(() => {
     fetch(url)
       .then((res) => res.json())
       .then((data) => setMyToys(data));
-  }),
-    [url];
+  }, [url]);
+
+  const handleSort = () => {
+    setSortOrder(sortOrder === 1 ? -1 : 1);
+  };
+
   return (
     <div>
       <h1
@@ -23,6 +29,22 @@ const MyToys = () => {
       >
         My Toys
       </h1>
+      <div>
+      <div>
+        <div className="dropdown dropdown-hover relative left-[1480px]">
+          <label tabIndex={0} className="btn  m-1">
+            Sort By Price
+          </label>
+          <ul className="dropdown-content menu p-2 shadow bg-gray-400 rounded-box w-52">
+            <li>
+              <button onClick={() => handleSort(1)}>Ascending</button>
+            </li>
+            <li>
+              <button onClick={() => handleSort(-1)}>Descending</button>
+            </li>
+          </ul>
+        </div>
+      </div>
       <table className="table table-compact w-[1500px]  mx-auto rounded-lg bg-gray-600 mt-5 mb-6">
         <thead>
           <tr className="text-yellow-50">
@@ -45,6 +67,7 @@ const MyToys = () => {
           ))}
         </tbody>
       </table>
+    </div>
     </div>
   );
 };

@@ -1,10 +1,45 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { useLoaderData } from "react-router-dom";
+import axios from "axios";
 import ToysData from "./ToysData";
 
 const AllToys = () => {
   const allToys = useLoaderData();
   const [searchQuery, setSearchQuery] = useState("");
+  const [toys, setToys] = useState([]);
+
+  useEffect(() => {
+    const fetchToys = async () => {
+      try {
+        const response = await axios.get("/newToySuperHero", {
+          params: { email: "", limit: 20 },
+        });
+        setToys(response.data);
+      } catch (error) {
+        console.error(error);
+      }
+    };
+
+    fetchToys();
+  }, []);
+
+  const handleSearch = async () => {
+    try {
+      const response = await axios.get("/newToySuperHero", {
+        params: { email: searchQuery, limit: 20 },
+      });
+      setToys(response.data);
+    } catch (error) {
+      console.error(error);
+    }
+  };
+
+  const filteredToys = allToys
+    ? allToys.filter((toy) =>
+        toy.name?.toLowerCase().includes(searchQuery.toLowerCase())
+      )
+    : [];
+
   return (
     <div>
       <h1
@@ -17,12 +52,13 @@ const AllToys = () => {
         All Toys
       </h1>
       <input
-        className="bg-gray-500 rounded-sm ml-48 h-10 pl-3"
+        className="bg-gray-100 border-2 border-slate-300 rounded-sm ml-[750px] h-10 pl-3 mt-7"
         type="text"
         value={searchQuery}
         onChange={(e) => setSearchQuery(e.target.value)}
         placeholder="Search by toy name"
       />
+      <button className="bg-gray-100 h-10 rounded-sm border-2" onClick={handleSearch}>Search</button>
       <table className="table table-compact w-[1500px]  mx-auto rounded-lg bg-gray-600 mt-5 mb-6">
         <thead>
           <tr className="text-yellow-50">
@@ -35,11 +71,9 @@ const AllToys = () => {
           </tr>
         </thead>
         <tbody>
-          {allToys
-            .slice(0, 20)
-            .map((toy) => (
-              <ToysData key={toy._id} toy={toy}></ToysData>
-            ))}
+          {filteredToys.map((toy) => (
+            <ToysData key={toy._id} toy={toy}></ToysData>
+          ))}
         </tbody>
       </table>
     </div>
@@ -47,13 +81,4 @@ const AllToys = () => {
 };
 
 export default AllToys;
-{
-  /* <div className="flex justify-center -ml-56 gap-36  mx-auto leading-loose mb-8 text-gray-600 font-bold">
-<img className="h-20 w-20" src={imageURL} alt="" />
-<h5 className="text-center">{sellerName}</h5>
-<h5 className="text-center -ml-10">{toyName}</h5>
-<h5 className="text-center">{subCategory}</h5>
-<h5 className="text-center">{price}</h5>
-<h5 className="text-center">{quantity}</h5>
-<Link to={`/toyDetails/${_id}`}><button className="btn btn-outline">View Details</button></Link> */
-}
+
