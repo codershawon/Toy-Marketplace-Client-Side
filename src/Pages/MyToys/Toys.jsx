@@ -1,16 +1,17 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import Swal from "sweetalert2";
-const Toys = ({ toys,myToys,setMyToys }) => {
+const Toys = ({ toys}) => {
+  const[toy,setToy]=useState([])
   const {
     _id,
     sellerName,
     email,
-    toyName,
+    name,
     subCategory,
     price,
     quantity,
-    imageURL,
+    image,
     ratings,
     details,
   } = toys;
@@ -38,8 +39,8 @@ const Toys = ({ toys,myToys,setMyToys }) => {
             )
           }
         })
-        const remaining=myToys.filter(toy=>toy._id!==_id)
-        setMyToys(remaining)
+        const remaining=toys.filter(toy=>toy._id!==_id)
+        setToy(remaining)
         
       }
     })
@@ -47,11 +48,11 @@ const Toys = ({ toys,myToys,setMyToys }) => {
   return (
     <tr className="text-gray-300 font-bold">
       <td>
-        <img className="h-20 w-20 rounded-lg" src={imageURL} alt="" />
+        <img className="h-20 w-20 rounded-lg" src={image} alt="" />
       </td>
       <td>{sellerName}</td>
       <td>{email}</td>
-      <td>{toyName}</td>
+      <td>{name}</td>
       <td>{subCategory}</td>
       <td>{price}</td>
       <td>{quantity}</td>

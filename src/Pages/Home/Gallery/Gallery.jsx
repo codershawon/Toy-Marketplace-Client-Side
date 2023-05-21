@@ -2,10 +2,10 @@ import React from "react";
 const Gallery = () => {
   return (
     <div>
-      <h1 className="text-center text-4xl font-bold mt-20 mb-8 text-amber-700">
+      <h1 className="text-left lg:text-center text-4xl w-full font-bold mt-20 ml-32 lg:ml-0 mb-8 text-amber-700">
         Explore Our Superhero Toy Collection
       </h1>
-      <div className="grid grid-cols-3 w-[1360px] mx-auto gap-2">
+      <div className="grid lg:grid-cols-3 w-[640px] lg:w-[1360px] mx-auto gap-1 ml-32 lg:ml-40 ">
       <div className="rounded-lg overflow-hidden hover:scale-105 transform transition-all duration-300">
           <img
             className="w-[500px] h-[500px] object-cover"
@@ -67,3 +67,4 @@ const Gallery = () => {
 };
 
 export default Gallery;
+// className=' mx-36 mb-10 w-[640px] lg:w-auto ml-14 lg:ml-40 grid lg:grid-cols-3'

@@ -2,7 +2,6 @@ import React, { useState } from 'react';
 import { RiArrowDropDownLine } from "react-icons/Ri";
 import { useLoaderData } from 'react-router-dom';
 import Swal from 'sweetalert2';
-// import Swal from "sweetalert2";
 const UpdatedToys = () => {
     const updatedToy=useLoaderData()
     console.log(updatedToy)

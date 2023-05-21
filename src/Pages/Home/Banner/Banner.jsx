@@ -1,7 +1,7 @@
 import React from "react";
 const Banner = () => {
   return (
-    <div className="flex justify-around items-center mx-auto">
+    <div className="flex flex-col lg:flex-row ml-96 lg:-ml-32 justify-center items-center gap-44 mx-auto mb-4">
       <div className="w-[600px]">
         <h1 className="text-5xl font-bold ml-8 text-purple-400 uppercase w-[650px] leading-tight">Welcome to Superhero Toy Kingdom!</h1>
         <p className="mt-5 text-xl ml-8 leading-8 text-gray-500 font-semibold">
@@ -23,4 +23,3 @@ const Banner = () => {
 };
 
 export default Banner;
- 

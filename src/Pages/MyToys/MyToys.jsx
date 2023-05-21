@@ -5,7 +5,6 @@ import Toys from "./Toys";
 const MyToys = () => {
   const { user } = useContext(AuthContext);
   const [myToys, setMyToys] = useState([]);
-  const [searchQuery, setSearchQuery] = useState("");
   const url = `http://localhost:5000/newToySuperHero?email=${user?.email}`;
   useEffect(() => {
     fetch(url)
@@ -15,15 +14,15 @@ const MyToys = () => {
     [url];
   return (
     <div>
-      <h1 style={{background: "radial-gradient(126.75% 133.09% at 50% 49.99%, #DC8D48 0%, #D38745 4.19%, #91572B 36.95%, #5E3116 66.01%, #3F1A0A 87.87%, #331105 100%)"}} className="text-center font-bold text-3xl bg-amber-900 w-60 rounded-lg mx-auto uppercase text-white">My Toys</h1>
-      <input
-        className="bg-gray-500 rounded-sm ml-48 h-10 pl-3"
-        type="text"
-        value={searchQuery}
-        onChange={(e) => setSearchQuery(e.target.value)}
-        placeholder="Search by toy name"
-      />
-
+      <h1
+        style={{
+          background:
+            "radial-gradient(126.75% 133.09% at 50% 49.99%, #DC8D48 0%, #D38745 4.19%, #91572B 36.95%, #5E3116 66.01%, #3F1A0A 87.87%, #331105 100%)",
+        }}
+        className="text-center font-bold text-3xl bg-amber-900 w-60 rounded-lg mx-auto uppercase text-white"
+      >
+        My Toys
+      </h1>
       <table className="table table-compact w-[1500px]  mx-auto rounded-lg bg-gray-600 mt-5 mb-6">
         <thead>
           <tr className="text-yellow-50">
@@ -41,14 +40,9 @@ const MyToys = () => {
           </tr>
         </thead>
         <tbody>
-          {myToys
-            .filter((toy) =>
-              toy.toyName.toLowerCase().includes(searchQuery.toLowerCase())
-            )
-            .slice(0, 20)
-            .map((toys) => (
-              <Toys key={toys._id} toys={toys}></Toys>
-            ))}
+          {myToys.map((toys) => (
+            <Toys key={toys._id} toys={toys}></Toys>
+          ))}
         </tbody>
       </table>
     </div>

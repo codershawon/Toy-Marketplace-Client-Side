@@ -8,8 +8,8 @@ const AddToy = () => {
   const handleAddToy=e=>{
     e.preventDefault()
     const form=e.target;
-    const imageURL=form.imageURL.value;
-    const toyName=form.toyName.value;
+    const image=form.image.value;
+    const name=form.name.value;
     const sellerName=form.sellerName.value;
     const email=form.email.value;
     const subCategory=form.category.value;
@@ -18,7 +18,7 @@ const AddToy = () => {
     const quantity=form.quantity.value;
     const details=form.details.value;
     const userDetails={
-      imageURL,toyName,sellerName,email,subCategory,price,ratings,quantity,details
+      image,name,sellerName,email,subCategory,price,ratings,quantity,details
     }
     console.log(userDetails)
     fetch(`http://localhost:5000/newToySuperHero`,{
@@ -63,7 +63,7 @@ const AddToy = () => {
             <input
               className="bg-gray-300 w-[350px] h-[50px] rounded-lg pl-3"
               type="text"
-              name="imageURL"
+              name="image"
               id=""
               placeholder="Image URL"
               required
