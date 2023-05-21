@@ -4,11 +4,13 @@ import "./SignIn.css"
 import { AuthContext } from "../../Providers/AuthProviders";
 import { ToastContainer, toast } from "react-toastify";
 import 'react-toastify/dist/ReactToastify.css';
+import useTitle from "../../hooks/useTitle";
 const SignIn = () => {
     const [error,setError]=useState("")
     const [success,setSuccess]=useState("")
     const{signInUser,signInWithGoogle}=useContext(AuthContext)
     const Navigate = useNavigate();
+    useTitle("Login")
     const location = useLocation();
     console.log(location);
     const from = location.state?.from?.pathname || "/";

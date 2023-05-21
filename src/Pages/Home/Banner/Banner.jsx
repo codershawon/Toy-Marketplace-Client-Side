@@ -1,5 +1,7 @@
 import React from "react";
+import useTitle from "../../../hooks/useTitle";
 const Banner = () => {
+  useTitle("Banner")
   return (
     <div className="flex flex-col lg:flex-row ml-96 lg:-ml-32 justify-center items-center gap-44 mx-auto mb-4">
       <div className="w-[600px]">

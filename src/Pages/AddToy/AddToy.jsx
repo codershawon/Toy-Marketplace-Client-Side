@@ -2,9 +2,11 @@ import React, { useContext, useState } from "react";
 import { RiArrowDropDownLine } from "react-icons/Ri";
 import { AuthContext } from "../../Providers/AuthProviders";
 import Swal from "sweetalert2";
+import useTitle from "../../hooks/useTitle";
 const AddToy = () => {
     const {user}=useContext(AuthContext)
   const [selectedItem, setSelectedItem] = useState("");
+  useTitle("Add Toy")
   const handleAddToy=e=>{
     e.preventDefault()
     const form=e.target;
@@ -21,7 +23,7 @@ const AddToy = () => {
       image,name,sellerName,email,subCategory,price,ratings,quantity,details
     }
     console.log(userDetails)
-    fetch(`http://localhost:5000/newToySuperHero`,{
+    fetch(`https://toy-marketplace-server-side-five.vercel.app/newToySuperHero`,{
         method:"POST",
         headers:{
             "Content-Type":"application/json"

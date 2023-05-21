@@ -4,10 +4,12 @@ import { Link, Navigate } from "react-router-dom";
 import { ToastContainer, toast } from "react-toastify";
 import 'react-toastify/dist/ReactToastify.css';
 import { AuthContext } from "../../Providers/AuthProviders";
+import useTitle from "../../hooks/useTitle";
 const SignUp = () => {
   const [error, setError] = useState("");
   const [success, setSuccess] = useState("");
   const { createUser} = useContext(AuthContext);
+  useTitle("SignUp")
   const handleSignUp = (e) => {
     e.preventDefault();
     const form = e.target;

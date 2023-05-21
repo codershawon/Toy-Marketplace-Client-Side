@@ -3,12 +3,14 @@ import { AuthContext } from "../../Providers/AuthProviders";
 import { Rating } from "@smastrom/react-rating";
 import "@smastrom/react-rating/style.css";
 import { useLoaderData } from "react-router-dom";
+import useTitle from "../../hooks/useTitle";
 
 
 const ToyDetails = () => {
 const {user}=useContext(AuthContext)
 const toyDetails=useLoaderData()
 console.log(toyDetails)
+useTitle("Toy Details")
   const {
     image,
     name,

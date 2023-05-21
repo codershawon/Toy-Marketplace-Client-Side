@@ -12,7 +12,7 @@ const ShopByCategory = () => {
   const transformers=superHeroes.filter((item)=>item.subCategory==="Transformers")
   console.log(marvelSuperHeroes)
   useEffect(() => {
-    fetch(`http://localhost:5000/newToySuperHero`)
+    fetch(`https://toy-marketplace-server-side-five.vercel.app/newToySuperHero`)
       .then((res) => res.json())
       .then((data) => setSuperHeroes(data));
   }, []);

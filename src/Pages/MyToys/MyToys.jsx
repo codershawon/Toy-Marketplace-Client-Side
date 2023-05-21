@@ -1,13 +1,14 @@
 import React, { useContext, useEffect, useState } from "react";
 import { AuthContext } from "../../Providers/AuthProviders";
 import Toys from "./Toys";
+import useTitle from "../../hooks/useTitle";
 
 const MyToys = () => {
   const { user } = useContext(AuthContext);
   const [myToys, setMyToys] = useState([]);
   const [sortOrder, setSortOrder] = useState(1);
-  const url = `http://localhost:5000/newToySuperHero?email=${user?.email}&sortField=price&sortOrder=${sortOrder}`;
-
+  const url = `https://toy-marketplace-server-side-five.vercel.app/newToySuperHero?email=${user?.email}&sortField=price&sortOrder=${sortOrder}`;
+useTitle("My Toys")
   useEffect(() => {
     fetch(url)
       .then((res) => res.json())

@@ -54,24 +54,28 @@ const router = createBrowserRouter([
             <MyToys></MyToys>
           </PrivateRoutes>
         ),
-        loader:()=>fetch(`http://localhost:5000/newToySuperHero`)
+        loader: () =>
+          fetch(
+            `https://toy-marketplace-server-side-five.vercel.app/newToySuperHero`
+          ),
       },
       {
-        path:"/allToys",
-        element:<AllToys></AllToys>,
-        loader:()=>fetch(`http://localhost:5000/newToySuperHero`)
+        path: "/allToys",
+        element: <AllToys></AllToys>,
+        loader: () => fetch(`https://toy-marketplace-server-side-five.vercel.app/newToySuperHero`),
       },
       {
         path: "/toyDetails/:id",
-        element:<ToyDetails />,
-        loader:({params})=>fetch(`http://localhost:5000/newToySuperHero/${params.id}`)
+        element: <ToyDetails />,
+        loader: ({ params }) =>
+          fetch(`https://toy-marketplace-server-side-five.vercel.app/newToySuperHero/${params.id}`),
       },
-     {
-      path:"/updatedToys/:id",
-      element:<UpdatedToys></UpdatedToys>,
-      loader:({params})=>fetch(`http://localhost:5000/newToySuperHero/${params.id}`)
-     }
-      
+      {
+        path: "/updatedToys/:id",
+        element: <UpdatedToys></UpdatedToys>,
+        loader: ({ params }) =>
+          fetch(`https://toy-marketplace-server-side-five.vercel.app/newToySuperHero/${params.id}`),
+      },
     ],
   },
 ]);

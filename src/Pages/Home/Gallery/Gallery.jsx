@@ -1,5 +1,7 @@
 import React from "react";
+import useTitle from "../../../hooks/useTitle";
 const Gallery = () => {
+  useTitle("Gallery")
   return (
     <div>
       <h1 className="text-left lg:text-center text-4xl w-full font-bold mt-20 ml-32 lg:ml-0 mb-8 text-amber-700">

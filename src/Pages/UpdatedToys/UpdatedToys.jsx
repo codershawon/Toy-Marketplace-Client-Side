@@ -2,10 +2,12 @@ import React, { useState } from 'react';
 import { RiArrowDropDownLine } from "react-icons/Ri";
 import { useLoaderData } from 'react-router-dom';
 import Swal from 'sweetalert2';
+import useTitle from '../../hooks/useTitle';
 const UpdatedToys = () => {
     const updatedToy=useLoaderData()
     console.log(updatedToy)
     const [selectedItem, setSelectedItem] = useState("");
+    useTitle("Updated Toys")
     const handleUpdateToy=e=>{
       e.preventDefault()
       const form=e.target;
@@ -22,7 +24,7 @@ const UpdatedToys = () => {
         imageURL,toyName,sellerName,email,subCategory,price,ratings,quantity,details
       }
       console.log(userDetails)
-      fetch(`http://localhost:5000/newToySuperHero/${updatedToy._id}`,{
+      fetch(`https://toy-marketplace-server-side-five.vercel.app/newToySuperHero/${updatedToy._id}`,{
         method:"PUT",
         headers:{
             "Content-Type":"application/json"

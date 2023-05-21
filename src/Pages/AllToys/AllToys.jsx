@@ -2,12 +2,13 @@ import React, { useEffect, useState } from "react";
 import { useLoaderData } from "react-router-dom";
 import axios from "axios";
 import ToysData from "./ToysData";
+import useTitle from "../../hooks/useTitle";
 
 const AllToys = () => {
   const allToys = useLoaderData();
   const [searchQuery, setSearchQuery] = useState("");
   const [toys, setToys] = useState([]);
-
+useTitle("All Toys")
   useEffect(() => {
     const fetchToys = async () => {
       try {
