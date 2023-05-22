@@ -29,7 +29,7 @@ const ShopByCategory = () => {
 
         <TabPanel>
           <h3 className="text-3xl font-semibold mb-8">Marvel Toys</h3>
-          <div className="grid grid-cols-2 w-[1300px] mx-auto gap-5 ">
+          <div className="grid grid-cols-1 lg:grid-cols-2 w-[1300px] mx-auto gap-5 ">
             {marvelSuperHeroes &&
               marvelSuperHeroes.map((marvelSuperHero) => (
                 <MarvelSuperHeroes key={marvelSuperHero.id}

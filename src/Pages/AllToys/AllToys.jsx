@@ -6,6 +6,7 @@ import useTitle from "../../hooks/useTitle";
 
 const AllToys = () => {
   const allToys = useLoaderData();
+console.log(allToys)
   const [searchQuery, setSearchQuery] = useState("");
   const [toys, setToys] = useState([]);
 useTitle("All Toys")
@@ -53,13 +54,13 @@ useTitle("All Toys")
         All Toys
       </h1>
       <input
-        className="bg-gray-100 border-2 border-slate-300 rounded-sm ml-[750px] h-10 pl-3 mt-7"
+        className="bg-gray-100 border-2 border-slate-300 rounded-sm ml-[850px] h-10 pl-3 mt-7"
         type="text"
         value={searchQuery}
         onChange={(e) => setSearchQuery(e.target.value)}
         placeholder="Search by toy name"
       />
-      <button className="bg-gray-100 h-10 rounded-sm border-2" onClick={handleSearch}>Search</button>
+      <button className="bg-gray-100 h-10 rounded-sm border-2 text-gray-600 font-semibold" onClick={handleSearch}>Search</button>
       <table className="table table-compact w-[1500px]  mx-auto rounded-lg bg-gray-600 mt-5 mb-6">
         <thead>
           <tr className="text-yellow-50">

@@ -6,7 +6,7 @@ import { Link } from "react-router-dom";
 const MarvelSuperHeroes = ({ marvelSuperHero }) => {
   const { image, name, rating, _id, price } = marvelSuperHero;
   return (
-    <div className="card card-side bg-gray-300 w-[650px] shadow-xl">
+    <div className="card card-side bg-gray-300 w-[350px] lg:w-[650px] shadow-xl ml-6 lg:0">
       <figure>
         <img className="h-[350px] w-[350px]" src={image} alt="Movie" />
       </figure>

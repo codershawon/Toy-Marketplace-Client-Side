@@ -1,12 +1,14 @@
 import React from "react";
+import useTitle from "../../../hooks/useTitle";
 
 const AboutUs = () => {
+  useTitle("About Us")
   return (
     <div>
       <section className="bg-gray-100 py-16">
         <div className="w-[1350px] mx-auto">
           <h2 className="text-4xl font-bold mb-8 text-center text-gray-800 uppercase"><span className="text-amber-900 font-bold">About</span> Us</h2>
-          <div className="flex flex-col md:flex-row justify-between">
+          <div className="flex flex-col md:flex-row gap-2 justify-between">
             <div className="md:w-1/2 mb-6 md:mb-0">
               <h3 className="text-2xl font-bold mb-4 text-gray-900">Our Mission</h3>
               <p className="text-[#757575] font-semibold mb-6">
