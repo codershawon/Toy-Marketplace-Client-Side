@@ -18,7 +18,7 @@ const Navbar = () => {
 
   return (
     <div>
-    <div className="flex justify-between lg:justify-around items-center bg-gray-800 pb-2 mb-4 w-[640px] lg:w-full mx-auto pl-10 lg:pl-0">
+    <div className="flex justify-between gap-40 lg:gap-0 lg:justify-around items-center bg-gray-800 pb-2 mb-4 w-full mx-auto pl-10 lg:pl-0">
       {/* Mobile Menu Toggle Button */}
       <button
        className={`md:hidden px-2 text-gray-400 hover:text-white -ml-10 lg:ml-0 ${isMenuOpen ? 'rotate-180' : ''}`}
@@ -37,13 +37,13 @@ const Navbar = () => {
         </svg>
       </button>
        
-      <div className="flex justify-center items-center text-2xl gap-4">
+      <div className="flex justify-center items-center text-2xl gap-20 lg:gap-0">
         <img
-          className="w-16 h-24 -ml-44 lg:ml-0"
+          className="w-16 h-24  -ml-40 lg:ml-0"
           src="https://i.ibb.co/JF1LFrJ/photo-1590341328520-63256eb32bc3-removebg-preview-1.png"
           alt=""
         />
-        <h1 className="mt-6">
+        <h1 className="mt-6 w-80">
           <span className="text-blue-600 font-bold">SuperHero</span>{" "}
           <span className="text-rose-800 font-bold">Toy</span>{" "}
           <span className="text-yellow-500 font-bold">Kingdom</span>

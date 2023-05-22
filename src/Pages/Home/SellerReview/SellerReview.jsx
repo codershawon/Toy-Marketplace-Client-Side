@@ -4,12 +4,12 @@ import { Rating } from "@smastrom/react-rating";
 import "@smastrom/react-rating/style.css";
 const SellerReview = () => {
   return (
-    <div className="w-[1220px] mx-auto mb-6 mt-10 ">
+    <div className=" w-[640px] lg:w-[1220px] mx-auto mb-6 mt-10 -ml-32 lg:ml-96">
       <h1 className="text-3xl font-bold text-center mt-6 mb-8 uppercase">
         Seller's <span className="text-amber-900 font-extrabold">Review</span>
       </h1>
-      <div className="grid grid-cols-2 gap-3">
-        <div className="card w-[600px] bg-gray-200 mx-auto ">
+      <div className="grid grid-cols-1 lg:grid-cols-2 gap-3">
+        <div className="card w-[350px] lg:w-[600px] bg-gray-200 mx-auto ">
           <div className="card-body items-center text-center">
             <img
               className="h-24 w-24 rounded-full hover:scale-110 transition-transform duration-300"
@@ -25,7 +25,7 @@ const SellerReview = () => {
               />
             </p>
             <div className="card-actions justify-end">
-              <p className="w-[550px] lg:w-[480px] mx-40  text-[#757575] font-semibold ml-12 lg:ml-40">
+              <p className="w-[300px] lg:w-[480px] mx-40  text-[#757575] font-semibold ml-36 lg:ml-40">
                 <span className="font-bold text-5xl text-pink-500">“</span>I
                 recently purchased a Marvel action figure from this website, and
                 I couldn't be happier with my experience. The seller provided
@@ -41,7 +41,7 @@ const SellerReview = () => {
             </div>
           </div>
         </div>
-        <div className="card w-[600px] bg-gray-200 mx-auto ">
+        <div className="card  w-[350px] lg:w-[600px] bg-gray-200 mx-auto ">
           <div className="card-body items-center text-center">
             <img
               className="h-24 w-24 rounded-full hover:scale-110 transition-transform duration-300"
@@ -57,7 +57,7 @@ const SellerReview = () => {
               />
             </p>
             <div className="card-actions justify-end">
-              <p className="w-[550px] lg:w-[480px] mx-40  text-[#757575] font-semibold ml-12 lg:ml-40">
+              <p className="w-[300px] lg:w-[480px] mx-40  text-[#757575] font-semibold ml-36 lg:ml-40">
                 <span className="font-bold text-5xl text-pink-500">“</span>I'm a
                 parent who wanted to surprise my son with some superhero toys
                 for his birthday. I stumbled upon this website and decided to
@@ -74,7 +74,7 @@ const SellerReview = () => {
             </div>
           </div>
         </div>
-        <div className="card w-[600px] bg-gray-200 mx-auto ">
+        <div className="card w-[350px] lg:w-[600px] bg-gray-200 mx-auto ">
           <div className="card-body items-center text-center">
             <img
               className="h-24 w-24 rounded-full hover:scale-110 transition-transform duration-300"
@@ -90,7 +90,7 @@ const SellerReview = () => {
               />
             </p>
             <div className="card-actions justify-end">
-              <p className="w-[550px] lg:w-[480px] mx-40  text-[#757575] font-semibold ml-12 lg:ml-40">
+              <p className="w-[300px] lg:w-[480px] mx-40  text-[#757575] font-semibold ml-36 lg:ml-40">
                 <span className="font-bold text-5xl text-pink-500">“</span>I
                 recently had a fantastic experience with a seller on this
                 platform. I ordered a Batman playset, and the seller provided
@@ -107,7 +107,7 @@ const SellerReview = () => {
             </div>
           </div>
         </div>
-        <div className="card w-[600px] bg-gray-200 mx-auto ">
+        <div className="card w-[350px] lg:w-[600px] bg-gray-200 mx-auto ">
           <div className="card-body items-center text-center">
             <img
               className="h-24 w-24 rounded-full hover:scale-110 transition-transform duration-300"
@@ -123,7 +123,7 @@ const SellerReview = () => {
               />
             </p>
             <div className="card-actions justify-end">
-              <p className="w-[550px] lg:w-[480px] mx-40  text-[#757575] font-semibold ml-12 lg:ml-40">
+              <p className="w-[300px] lg:w-[480px] mx-40  text-[#757575] font-semibold ml-36 lg:ml-40">
                 <span className="font-bold text-5xl text-pink-500">“</span>I've
                 been collecting superhero toys for years, and this website has
                 become my go-to source. The sellers on this platform are
@@ -140,7 +140,7 @@ const SellerReview = () => {
             </div>
           </div>
         </div>
-        <div className="card w-[600px] bg-gray-200 mx-auto ">
+        <div className="card w-[350px] lg:w-[600px] bg-gray-200 mx-auto ">
           <div className="card-body items-center text-center">
             <img
               className="h-24 w-24 rounded-full hover:scale-110 transition-transform duration-300"
@@ -156,7 +156,7 @@ const SellerReview = () => {
               />
             </p>
             <div className="card-actions justify-end">
-              <p className="w-[550px] lg:w-[480px] mx-40  text-[#757575] font-semibold ml-12 lg:ml-40">
+              <p className="w-[300px] lg:w-[480px] mx-40  text-[#757575] font-semibold ml-36 lg:ml-40">
                 <span className="font-bold text-5xl text-pink-500">“</span>As a
                 collector, I'm always on the lookout for unique and
                 limited-edition superhero toys. The sellers on this website
@@ -173,7 +173,7 @@ const SellerReview = () => {
             </div>
           </div>
         </div>
-        <div className="card w-[600px] bg-gray-200 mx-auto ">
+        <div className="card w-[350px] lg:w-[600px] bg-gray-200 mx-auto ">
           <div className="card-body items-center text-center">
             <img
               className="h-24 w-24 rounded-full hover:scale-110 transition-transform duration-300"
@@ -189,7 +189,7 @@ const SellerReview = () => {
               />
             </p>
             <div className="card-actions justify-end">
-              <p className="w-[550px] lg:w-[480px] mx-40  text-[#757575] font-semibold ml-12 lg:ml-40">
+              <p className="w-[300px] lg:w-[480px] mx-40  text-[#757575] font-semibold ml-36 lg:ml-40">
                 <span className="font-bold text-5xl text-pink-500">“</span>I'm
                 new to collecting superhero toys, and I had some doubts before
                 making my first purchase. The seller I interacted with was

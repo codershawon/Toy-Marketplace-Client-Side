@@ -2,7 +2,7 @@ import React from 'react';
 import { FaFacebookF, FaTwitter, FaYoutube } from 'react-icons/fa';
 const Footer = () => {
     return (
-        <footer className="footer p-10 bg-base-300 text-base-content flex-col lg:flex-none justify-around flex-wrap lg-flex-row sm-flex-col w-[850px] lg:w-full -ml-24 lg:-ml-0">
+        <footer className="footer p-10 bg-base-300 text-base-content flex-col lg:flex-none justify-around flex-wrap lg-flex-row sm-flex-col w-[445px] lg:w-full -ml-16 lg:-ml-0">
         <div className='-mt-7'>
           <img className='w-16 h-24' src="https://i.ibb.co/JF1LFrJ/photo-1590341328520-63256eb32bc3-removebg-preview-1.png"  alt="" />
           <p>Superhero Toy Kingdom<br/>Explore a world of superhero toys</p>
